@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>HomeCam & DoorLock/Login</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/buttonstyle.css')}}">
+</head>
+<body>
+    <img src="https://cdn-icons-png.flaticon.com/512/2709/2709340.png" class="cctvimg">
+    <img src="https://cdn-icons-png.flaticon.com/512/2706/2706914.png" class="faceimg">
+    <img src="https://cdn-icons-png.flaticon.com/512/4974/4974719.png" class="doorimg">
+    <h1>HomeCam & DoorLock</h1>
+    <div class="login-form">
+        <h3>Login</h3>
+        <form id="loginForm">
+            <input type="text" class="text-field" id="Inusername" name="username" placeholder="Email" required>
+            <input type="password"class="text-field" id="Inpassword" name="password" placeholder="Password" required>
+            <button type="button" class="learn-more" id="loginbutton">Sign In</button>
+            <button type="button" class="learn-more" onclick="location.href='/register';">Sign Up</button>
+        </form>
+    </div>
+    <!-- Include the Firebase JavaScript SDK as a module -->
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-app.js";
+        import { getAuth, signInWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-auth.js";
+        
+        // Your web app's Firebase configuration
+        // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+        const firebaseConfig = {
+            apiKey: "AIzaSyDpXmvo_nceTWz8YZh2wVWQjVHsaxmu6wc",
+            authDomain: "fir-storage-ea381.firebaseapp.com",
+            projectId: "fir-storage-ea381",
+            storageBucket: "fir-storage-ea381.appspot.com",
+            messagingSenderId: "1065706594226",
+            appId: "1:1065706594226:web:1e5f0738e12cc735fbceab"
+        };
+        
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+        const auth = getAuth(app);
+
+        // 로그인 버튼 클릭 시
+        document.getElementById("loginbutton").addEventListener("click", function() {
+            const username = document.getElementById("Inusername").value;
+            const password = document.getElementById("Inpassword").value;
+
+            // Firebase Authentication을 사용하여 로그인 시도
+            signInWithEmailAndPassword(auth, username, password)
+                .then((userCredential) => {
+                    // 로그인 성공 시 동작
+                    const user = userCredential.user;
+                    alert("로그인에 성공했습니다.");
+                            // 로그인 정보를 서버로 전송 (POST 요청)
+                    const userData = {
+                        email: user.email,
+                        uid: user.uid
+                    };
+
+                    fetch('/login', {
+                        method: 'POST',
+                        body: JSON.stringify(userData),
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    })
+                    .then(response => response.json())
+                    .then(data => {
+                        // 서버로부터의 응답 처리
+                        if (data.success) {
+                            // 원하는 페이지로 리디렉션
+                            window.location.href = '/choice';
+                        } else {
+                            alert(data.message);
+                        }
+                    });
+                })
+                .catch((error) => {
+                    // 로그인 실패 시 에러 메시지 출력
+                    const errorCode = error.code;
+                    const errorMessage = error.message;
+                    alert("로그인 실패: " + errorMessage);
+                });
+        });
+    </script>
+</body>
+</html>
