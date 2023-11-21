@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>이미지 갤러리</title>
+    <link rel="stylesheet" href="{{url_for('static', filename='css/style.css')}}">
+</head>
+<body>
+    <h1>이미지 갤러리</h1>
+    <div class="user-form">
+        {% for i in image_files %}
+            <div class="gallery-image">
+                <img src="{{ url_for('static', filename=i)}}" alt="이미지">
+            </div>
+        {% endfor %}
+    </div>
+    <a href="http://220.69.203.14:9091/">ss</a>
+</body>
+</html>
