@@ -15,10 +15,10 @@ Link 사업단에서 운영하는 AI·SW Festival에 참가하기 위해 프로�
 
 ## 👨‍👨‍👦 멤버 구성
 
-AI : [이경준](https://github.com/KYEONGJUN-LEE)
-IoT: [김현민](https://github.com/khm0930), [최진성](https://github.com/jinbobs)
-Front End: [안요셉](https://github.com/YosepAhn)
-Open API : [류지현](https://github.com/Ryu-ji-hyeon)
+- AI: [이경준](https://github.com/KYEONGJUN-LEE) 
+- IoT: [김현민](https://github.com/khm0930), [최진성](https://github.com/jinbobs)
+- Front End: [안요셉](https://github.com/YosepAhn)
+- Open API: [류지현](https://github.com/Ryu-ji-hyeon)
 ## :page_with_curl: 페이지 구성
 
 ### 1. 로그인
