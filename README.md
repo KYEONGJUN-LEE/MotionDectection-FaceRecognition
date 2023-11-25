@@ -1,7 +1,9 @@
 # [AI Project] - MotionDectection-FaceRecognition
 실시간으로 모션을 감지하여 알림이 가는 CCTV와 인공지능으로 얼굴인식을 하여 도어락을 통제하였습니다. 
-![award](https://github.com/KYEONGJUN-LEE/MotionDectection-FaceRecognition/assets/113089467/4fb450d7-a1bf-4266-9a00-856ce0411e98)
-![poster](https://github.com/KYEONGJUN-LEE/MotionDectection-FaceRecognition/assets/113089467/9f001baa-d4e6-44bb-bc4f-03e490a5d50f)
+<p float="left">
+  <img src="https://github.com/KYEONGJUN-LEE/MotionDectection-FaceRecognition/assets/113089467/4fb450d7-a1bf-4266-9a00-856ce0411e98" width="50%" />
+  <img src="https://github.com/KYEONGJUN-LEE/MotionDectection-FaceRecognition/assets/113089467/9f001baa-d4e6-44bb-bc4f-03e490a5d50f" width="50%" /> 
+</p>
 
 
 ##  :pushpin: 프로젝트 목적
