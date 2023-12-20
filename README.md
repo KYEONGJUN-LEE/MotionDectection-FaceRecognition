@@ -4,14 +4,15 @@
 <table>
 <tr>
 <td>
-<img src="https://github.com/KYEONGJUN-LEE/MotionDectection-FaceRecognition/assets/113089467/4fb450d7-a1bf-4266-9a00-856ce0411e98" >
+<img src="https://github.com/KYEONGJUN-LEE/MotionDectection-FaceRecognition/assets/113089467/4fb450d7-a1bf-4266-9a00-856ce0411e98" width="472">
 </td>
 <td>
-<img src="https://github.com/KYEONGJUN-LEE/MotionDectection-FaceRecognition/assets/113089467/9f001baa-d4e6-44bb-bc4f-03e490a5d50f">
+<img src="https://github.com/KYEONGJUN-LEE/MotionDectection-FaceRecognition/assets/113089467/9f001baa-d4e6-44bb-bc4f-03e490a5d50f" width="472">
 </td>
 </tr>
 </table>
 </center>
+
 
 
 
