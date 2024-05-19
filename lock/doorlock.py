@@ -223,7 +223,7 @@ def process_and_save_image(image_path):
     
     return output_path
 
-
+#192.168.1.5:9097 로 RESTful API 통신 함수
 def send_bw_image_to_server2(image_path):
     with open(image_path, 'rb') as image_file:
         files = {'image': (image_path, image_file)}
